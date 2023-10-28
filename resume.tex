@@ -1,7 +1,7 @@
 %-------------------------
 % Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
+% Author : Ronald Macmaster
+% Based off of: https://github.com/jakegut/resume
 % License : MIT
 %------------------------
 
@@ -18,8 +18,12 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage[dvipsnames]{xcolor}
 \input{glyphtounicode}
 
+\title{resume}
+\author{Ronald Macmaster}
+\date{October 2023}
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -69,18 +73,11 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
@@ -106,16 +103,11 @@
 \begin{document}
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
 \begin{center}
-    \textbf{\Huge \scshape Jake Ryan} \\ \vspace{1pt}
-    \small 123-456-7890 $|$ \href{mailto:x@x.com}{\underline{jake@su.edu}} $|$ 
-    \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
-    \href{https://github.com/...}{\underline{github.com/jake}}
+    \textbf{\Huge \scshape \textcolor{Maroon}{Ronald Macmaster}} \\ \vspace{2pt}
+    
+    \small (808) 206-1614 $|$ \href{mailto:ronnymacmaster@gmail.com}{\underline{ronnymacmaster@gmail.com}} $|$
+    \href{https://github.com/macmaster}{\underline{github.com/macmaster}}
 \end{center}
 
 
@@ -123,11 +115,12 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Southwestern University}{Georgetown, TX}
-      {Bachelor of Arts in Computer Science, Minor in Business}{Aug. 2018 -- May 2021}
-    \resumeSubheading
-      {Blinn College}{Bryan, TX}
-      {Associate's in Liberal Arts}{Aug. 2014 -- May 2018}
+      {University of Texas at Austin }{Austin, TX}
+      {Bachelor of Science in Computer Engineering; 
+       GPA: \normalfont\textcolor{Maroon}{4.0}}
+      {Aug. 2014 -- Dec. 2017}
+      \vspace{-4pt} \\
+      \small{Software Engineering and Computer Architecture}
   \resumeSubHeadingListEnd
 
 
@@ -136,43 +129,40 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Undergraduate Research Assistant}{June 2020 -- Present}
-      {Texas A\&M University}{College Station, TX}
-      \resumeItemListStart
-        \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
-        \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data}
-        \resumeItem{Explored ways to visualize GitHub collaboration in a classroom setting}
-      \resumeItemListEnd
+      {\large{Bloomberg L.P.}}{January 2018 -- Present}
+      {Senior Software Engineer (Hadoop Infrastructure)}{New York, NY}
       
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
-
-    \resumeSubheading
-      {Information Technology Support Specialist}{Sep. 2018 -- Present}
-      {Southwestern University}{Georgetown, TX}
+      \vspace{-15pt}
+      \subsubsection*{Operations}
+      \vspace{-10pt}
+      
       \resumeItemListStart
-        \resumeItem{Communicate with managers to set up campus computers used on campus}
-        \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
-        \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
-    \resumeItemListEnd
+        \resumeItem{Automated Processes for building / maintaining 2000+ machines across 30+ distributed Hadoop clusters}
+        \resumeItem{Linux Systems Administration (storage, networking, processes, security, filesystems, etc.)}
+        \resumeItem{Site Reliability Engineering support in (24/7) weekly on-call cycles}
+        \resumeItem{Stack: python, ruby, chef, ansible, linux, advanced bash scripting}
+      \resumeItemListEnd
 
-    \resumeSubheading
-      {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
-      {Southwestern University}{Georgetown, TX}
+      \vspace{-15pt}
+      \subsubsection*{Software Development}
+      \vspace{-10pt}
+      
       \resumeItemListStart
-        \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-        \resumeItem{Developed a game in Java to test the generated dungeons}
-        \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
-        \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
-        \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
-        \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
+        \resumeItem{Design Documents detailing the scope, architecture, api, tradeoffs, and use-cases}
+        \resumeItem{Develop and Test software for various control-plane microservices and tooling}
+        \resumeItem{Mentor and Collaborate with developers in a pair-programming environment}
+        \resumeItem{Stack: java, spring, react, jenkins, docker, kubernetes}
+      \resumeItemListEnd
+
+      \vspace{-15pt}
+      \subsubsection*{Application Support}
+      \vspace{-10pt}
+      
+      \resumeItemListStart
+        \resumeItem{Troubleshoot application issues that may be rooted in infra issues}
+        \resumeItem{Consultation for users on application design and performance optimization}
+        \resumeItem{Analyze upstream open-source project source code for root-cause debugging}
+        \resumeItem{Stack: distributed systems, hadoop, mapreduce, spark, hbase, hive}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -181,8 +171,9 @@
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+    
       \resumeProjectHeading
-          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
+          {\textbf{Database Copy} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{}
           \resumeItemListStart
             \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
             \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
@@ -190,29 +181,40 @@
             \resumeItem{Used Celery and Redis for asynchronous tasks}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
+          {\textbf{Genius UI} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
           \resumeItemListStart
             \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
             \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
             \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
             \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
           \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\textbf{Region Normalizer} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
+          \resumeItemListStart
+            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
+            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
+            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
+            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
+          \resumeItemListEnd
+          
     \resumeSubHeadingListEnd
 
 
 
 %
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
+%-----------SKILLS-----------
+\section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
-     \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-     \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+     \textbf{Languages}{: Java, Ruby, Python, Javascript, C/C++} \\
+     \textbf{Frameworks}{: React, Spring, Chef, Ansible} \\
+     \textbf{CI/CD}{: Git, Docker, Jenkins, Kubernetes, Linux System Administration} \\
+     \textbf{Distributed Systems}{: Hadoop, HBase, Spark, MapReduce, Hive}
     }}
  \end{itemize}
 
 
 %-------------------------------------------
 \end{document}
+
